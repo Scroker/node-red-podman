@@ -1,0 +1,14 @@
+version: "1"
+
+services:
+  node_red:
+    container_name: node_red
+    image: nodered/node-red:latest
+    ports:
+      - 1880:1880
+    volumes:
+      - data:/data
+      - /etc/localtime:/etc/localtime:ro
+
+volumes:
+  data:
